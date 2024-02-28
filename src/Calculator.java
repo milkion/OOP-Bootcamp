@@ -16,4 +16,13 @@ public class Calculator {
     boolean isPositive(int i) {
         return (i >= 0);
     }
+
+    /**
+     * @param i first number
+     * @param j second number
+     * @return the product of i+j
+     */
+    int multiplyTwoNumbers(int i, int j) {
+        return (i * j);
+    }
 }
