@@ -24,7 +24,7 @@ public class BookingSystem {
         for(int i = 0; i < vehicles.length; i++){
 
             System.out.println("Booking Item (" + bookingNum + ")");
-            System.out.println(vehicles[0].toString());
+            System.out.println(vehicles[i].toString());
             bookingNum++;
         }
     }
