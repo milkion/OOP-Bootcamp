@@ -12,7 +12,7 @@ public class Vehicle {
 
     @Override
     public String toString(){
-        return String.format("Brand: %s \nYear: %d \nPrice: %.2f per day", brand, year, price);
+        return String.format("Vehicle detail:\nBrand: %s \nYear: %d \nPrice: %.2f per day", brand, year, price);
     }
 
 }
