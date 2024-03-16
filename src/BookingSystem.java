@@ -1,11 +1,35 @@
+import java.sql.Array;
+import java.util.ArrayList;
+
 public class BookingSystem {
 
     Vehicle[] vehicles = new Vehicle[6];
 
+    ArrayList<Booking> bookingList = new ArrayList<>();
+
+    public void addBookings(Booking booking) {
+        bookingList.add(booking);
+    }
+
+    public void addBookingForVehicle() {
+
+        ArrayList<Action> actions = new ArrayList<>();
+
+        for (Vehicle vehicle : vehicles) {
+            actions.add(new AddBookingAction(new Booking(vehicle)));
+        }
+
+        System.out.println("#########################################");
+        Action action = Menu.showMenu(actions);
+        System.out.println(action.execute(this));
+
+    }
+
     public void printStatus() {
-        System.out.println("Welcome to FIT2099 Booking System \n");
+        System.out.println("Welcome to FIT2099 Booking System");
         createVehicles();
-        displayVehicles();
+        addBookingForVehicle();
+//        displayVehicles();
         System.out.println("Thank you for visiting FIT2099 Booking System!");
     }
 
