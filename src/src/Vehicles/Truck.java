@@ -1,4 +1,8 @@
-public class Truck extends Vehicle{
+package src.Vehicles;
+
+import src.ActionCapables.Vehicle;
+
+public class Truck extends Vehicle {
 
     private double loading;
     public Truck(String brand, int year, double price, double loading){
@@ -8,6 +12,6 @@ public class Truck extends Vehicle{
 
     @Override
     public String toString(){
-        return String.format("%s \nLoading: %.1f \n", super.toString(), loading);
+        return String.format("%s | Loading: %.1f", super.toString(), loading);
     }
 }

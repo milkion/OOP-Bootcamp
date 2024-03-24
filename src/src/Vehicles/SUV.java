@@ -1,4 +1,8 @@
-public class SUV extends Vehicle{
+package src.Vehicles;
+
+import src.ActionCapables.Vehicle;
+
+public class SUV extends Vehicle {
 
     private int seats;
     private EngineType engineType;
@@ -11,6 +15,6 @@ public class SUV extends Vehicle{
 
     @Override
     public String toString(){
-        return String.format("%s \nEngine Type: %s \nNumber of Seats: %d \n", super.toString(), engineType, seats);
+        return String.format("%s | Engine Type: %s | Number of Seats: %d", super.toString(), engineType, seats);
     }
 }

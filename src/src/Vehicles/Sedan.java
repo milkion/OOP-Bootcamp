@@ -1,4 +1,8 @@
-public class Sedan extends Vehicle{
+package src.Vehicles;
+
+import src.ActionCapables.Vehicle;
+
+public class Sedan extends Vehicle {
 
     private int range;
     private EngineType engineType;
@@ -10,7 +14,7 @@ public class Sedan extends Vehicle{
 
     @Override
     public String toString(){
-        return String.format("%s \nRange: %d km \nEngine Type: %s\n", super.toString(), range, engineType);
+        return String.format("%s | Range: %d km | Engine Type: %s", super.toString(), range, engineType);
     }
 }
 
