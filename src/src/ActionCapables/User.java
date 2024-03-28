@@ -2,6 +2,9 @@ package src.ActionCapables;
 
 import src.ActionCapable;
 import src.Actions.*;
+import src.Payment.ApplePay;
+import src.Payment.GooglePay;
+import src.Payment.Payment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +12,7 @@ import java.util.List;
 
 public class User implements ActionCapable {
 
-    private double balance;
+    private double balance = 0;
     private boolean isUserDone;
 
     private ArrayList<Booking> bookingList = new ArrayList<>();
@@ -21,7 +24,7 @@ public class User implements ActionCapable {
     }
 
     public void setBalance(double balance) {
-        this.balance = balance;
+        this.balance += balance;
     }
 
     public boolean isUserDone() {
@@ -59,7 +62,9 @@ public class User implements ActionCapable {
     @Override
     public List<Action> allowableActions(){
         List<Action> actions = new ArrayList<>();
-        actions.add(new AddBalanceAction());
+
+        actions.add(new AddBalanceAction(new ApplePay()));
+        actions.add(new AddBalanceAction(new GooglePay()));
         actions.add(new ViewBalanceAction());
         actions.add(new DisplayBookingAction());
         actions.add(new ConfirmAction());
