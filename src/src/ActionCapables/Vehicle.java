@@ -13,10 +13,14 @@ public class Vehicle implements ActionCapable {
     private int year;
     private double price;
 
-    public Vehicle(String brand, int year, double price){
+    private String vehicleID;
+
+
+    public Vehicle(String brand, int year, double price, String vehicleID){
         this.brand = brand;
         this.year = year;
         this.price = price;
+        this.vehicleID = vehicleID;
     }
 
     public double getPrice() {
@@ -25,7 +29,7 @@ public class Vehicle implements ActionCapable {
 
     @Override
     public String toString(){
-        return String.format("Vehicle detail: Brand: %s | Year: %d | Price: %.2f per day", brand, year, price);
+        return String.format("Vehicle detail: Vehicle ID: %s Brand: %s | Year: %d | Price: %.2f per day", vehicleID, brand, year, price);
     }
 
     @Override
