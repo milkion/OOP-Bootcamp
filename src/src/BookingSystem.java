@@ -8,6 +8,10 @@ import src.Actions.Action;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * A Class for the Booking System.
+ */
 public class BookingSystem {
 
     ArrayList<Vehicle> vehicles = new ArrayList<>();
@@ -15,7 +19,9 @@ public class BookingSystem {
     User user = new User();
 
 
-
+    /**
+     * Method to display the console menu.
+     */
     public void consoleMenu() {
         while (!user.isUserDone()){
 
@@ -36,12 +42,18 @@ public class BookingSystem {
         }
     }
 
+    /**
+     * Method to print the status of the Booking System.
+     */
     public void printStatus() {
         System.out.println("Welcome to FIT2099 booking.Booking System");
         createVehicles();
         consoleMenu();
     }
 
+    /**
+     * Method to create vehicles.
+     */
     public void createVehicles(){
         vehicles.add(new Sedan("Lexus", 2023, 200.00, 500, EngineType.ELECTRIC));
         vehicles.add(new Sedan("BMW",  2022, 150.00, 600, EngineType.PETROL));
