@@ -4,8 +4,20 @@ import src.BookingSystem;
 import src.ActionCapables.User;
 import src.ActionCapables.Booking;
 
+/**
+ * This is a ConfirmAction class that represents an action to confirm bookings in the booking system.
+ * It implements the Action interface.
+ */
 public class ConfirmAction implements Action {
 
+
+    /**
+     * Executes the action for a given user in the booking system.
+     *
+     * @param user the user who is executing the action
+     * @param bookingSystem the booking system in which the action is being executed
+     * @return a string representing the result of the action execution
+     */
     @Override
     public String execute(User user, BookingSystem bookingSystem){
 
@@ -27,6 +39,10 @@ public class ConfirmAction implements Action {
 
     };
 
+
+    /**
+     * @return a string representing the description of the action
+     */
     @Override
     public String menuDescription(){
         return "Confirm bookings.";

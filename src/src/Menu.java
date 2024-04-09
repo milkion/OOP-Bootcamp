@@ -4,7 +4,17 @@ import src.Actions.Action;
 
 import java.util.*;
 
+
+/**
+ * Class for the Menu.
+ */
 public class Menu {
+
+    /**
+     * Method to show the menu.
+     * @param actions List of actions.
+     * @return Action.
+     */
     public static Action showMenu(List<Action> actions) {
         Scanner scanner = new Scanner(System.in);
         List<Character> freeChars = new ArrayList<Character>();
